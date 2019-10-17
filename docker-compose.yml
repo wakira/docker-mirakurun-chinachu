@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   mirakurun:
     build:
@@ -22,12 +22,13 @@ services:
     ports:
      - "10772:10772"
      - "20772:20772"
-     - "5353:5353/udp"
+     # - "5353:5353/udp"
     volumes:
      - /etc/localtime:/etc/localtime:ro
      - ./chinachu/conf/config.json:/usr/local/chinachu/config.json
      - ./chinachu/conf/rules.json:/usr/local/chinachu/rules.json
      - ./chinachu/data:/usr/local/chinachu/data
      - ./recorded:/usr/local/chinachu/recorded
-    links:
-     - mirakurun:container-mirakurun
+
+    # links:
+    #  - mirakurun:container-mirakurun

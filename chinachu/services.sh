@@ -10,7 +10,7 @@ countdown_max=300
 run_countdown=0
 while [ ${run_countdown} -le ${countdown_max} ]
 do
-	http_status=`curl -s container-mirakurun:40772/api/status -o /dev/null -w '%{http_code}'`
+	http_status=`curl -s mirakurun:40772/api/status -o /dev/null -w '%{http_code}'`
 	if [ "${http_status}" = "200" ]; then
 		run_countdown=0
 		echo "mirakurun is run complete!"

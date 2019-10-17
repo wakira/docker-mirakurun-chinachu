@@ -68,4 +68,5 @@ COPY config.sample.json ${WORK_DIR}
 
 WORKDIR ${WORK_DIR}
 CMD ["/usr/local/bin/services.sh"]
-EXPOSE 10772 20772 5353
+# EXPOSE 10772 20772 5353
+EXPOSE 10772 20772
